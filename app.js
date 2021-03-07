@@ -70,18 +70,18 @@ const planets = [
 // =============================================================
 
 // 1: Create a 'Planet' component that renders a planet card
-const Planet = () => {
+const Planet = (props) => {
   return (
-    <div class="card">
+    <div className="card">
         <div>
-          <img src="img/mercury.jpg" alt="Mercury"/>
+          <img src={ props.url } alt={ props.name }/>
         </div>
-        <h2>Mercury</h2>
-        <p>Mercury is the closest planet to the Sun. Due to its proximity, it's not easily seen except during twilight...</p>
+        <h2>{ props.name }</h2>
+        <p>{ props.desc }</p>
         <h3>Planet Profile</h3>
         <ul>
-          <li><strong>Diameter:</strong> 3,031.67 mi</li>
-          <li><strong>Moons:</strong> none</li>
+          <li><strong>Diameter:</strong>{ props.diameter }</li>
+          <li><strong>Moons:</strong>{ props.moons }</li>
         </ul>
       </div>
   )
@@ -95,12 +95,12 @@ return (
   <div class="container"> 
   {props.planets.map( planet =>
     <Planet
-    name = {props.name}
-    url = {props.url}
-    desc = {props.desc}
-    diameter = {props.diameter}
-    moons = {props.moons}
-    key = {props.id}
+    name = {planet.name}
+    url = {planet.url}
+    desc = {planet.desc}
+    diameter = {planet.diameter}
+    moons = {planet.moons}
+    key = {planet.id}
      />
 
   )}
