@@ -99,3 +99,7 @@ return (
 }
 // 3: Render the container component to the DOM
 
+ReactDOM.render(
+  <PlanetList planets={ planets }/>,
+  document.getElementById("root")
+)
