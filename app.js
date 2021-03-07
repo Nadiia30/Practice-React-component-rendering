@@ -90,6 +90,12 @@ const Planet = () => {
 // 2: Create a container component that iterates over the planets array 
 //    and renders a 'Planet' component for each object in the array 
 
-
+const PlanetList = () => {
+return (
+  <div class="container"> 
+  <Planet />
+  </div>
+)
+}
 // 3: Render the container component to the DOM
 
